@@ -1,0 +1,602 @@
+﻿* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #f1f1f1;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+h4{
+  color:  #1DB954;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #1DB954;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  width: 150px;
+}
+
+nav a {
+  margin-right: 10px;
+  color: #fff;
+  font-weight: bold;
+}
+
+#search {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#search img {
+  width: 80px;
+  margin-right: 5px;
+}
+
+#search input[type="text"] {
+  width: 200px;
+  height: 30px;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+#search input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#search input[type="button"] {
+  display: none;
+}
+
+/* Main */
+#menu {
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+#menu div {
+  width: 30px;
+  height: 4px;
+  background-color: #333;
+  margin: 3px;
+}
+
+#menu-toggle,
+#menu-icon {
+  display: none;
+}
+
+h1 {
+  margin: 20px 0;
+  color: #1DB954;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+#profile_user {
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#profile_user img {
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+#lyrics {
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#lyrics h1 {
+  margin-bottom: 20px;
+  color: #1DB954;
+}
+
+#lyrics form {
+  margin-bottom: 20px;
+}
+
+#lyrics form div {
+  margin-bottom: 10px;
+}
+
+#lyrics form input[type="text"] {
+  width: 200px;
+  padding: 5px;
+}
+
+#lyrics form input[type="button"] {
+  background-color: #1DB954;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+footer em {
+  color: #1DB954;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+.button1 {
+  background-image: url("facebook.png");
+  background-position: center;
+  display: inline-block;
+  background-size: cover;
+  border: none;
+  z-index: 10;
+  padding: 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.button2 {
+  background-image: url("twitter.png");
+  background-position: center;
+  display: inline-block;
+  background-size: cover;
+  border: none;
+  z-index: 10;
+  padding: 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.button3 {
+  background-image: url("ig.png");
+  background-position: center;
+  display: inline-block;
+  background-size: cover;
+  border: none;
+  z-index: 10;
+  padding: 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+#main-container {
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#contents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#preferiti_albums,
+#preferiti_tracks,
+#preferiti_artists {
+  width: calc(33.33% - 20px); /* Dividere gli elementi in tre colonne */
+  background-color: #ffffff;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+#preferiti_albums h1,
+#preferiti_tracks h1,
+#preferiti_artists h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#preferiti_albums .here,
+#preferiti_tracks .here,
+#preferiti_artists .here {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#preferiti_albums .here > div,
+#preferiti_tracks .here > div,
+#preferiti_artists .here > div {
+  width: calc(33.33% - 10px); /* Dividere gli elementi figlio in tre colonne */
+  margin-bottom: 10px;
+}
+
+#preferiti_albums .here img,
+#preferiti_tracks .here img,
+#preferiti_artists .here img {
+  width: 130px;
+  height: 130px;
+}
+
+#preferiti_albums .here h3,
+#preferiti_tracks .here h3,
+#preferiti_artists .here h3 {
+  font-size: 16px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#preferiti_albums .here .preferiti_,
+#preferiti_tracks .here .preferiti_,
+#preferiti_artists .here .preferiti_ {
+  width: 20%;
+  height: 25%;
+  height: auto;
+  display: block;
+  margin: 10px auto 0;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Global styles */
+  body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #f1f1f1;
+  }
+
+  h1, h2, h3 {
+    color: #333;
+  }
+
+  h4 {
+    color: #1DB954;
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+
+  /* Header */
+  header {
+    background-color: #1DB954;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #logo {
+    width: 100px;
+  }
+
+  nav a {
+    margin-right: 5px;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  #search {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  #search img {
+    width: 60px;
+    margin-right: 5px;
+  }
+
+  #search input[type="text"] {
+    width: 150px;
+    height: 25px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    font-family: 'Noto Sans', sans-serif;
+  }
+
+  #search input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  #search input[type="button"] {
+    display: none;
+  }
+
+  /* Main */
+  #menu {
+    background-color: #fff;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #menu div {
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+    margin: 2px;
+  }
+
+  h1 {
+    margin: 10px 0;
+    color: #1DB954;
+  }
+
+  .subtitle {
+    color: #666;
+    margin-bottom: 10px;
+  }
+
+  #profile_user {
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #profile_user img {
+    width: 80px;
+    margin-bottom: 5px;
+  }
+
+  #lyrics {
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #lyrics h1 {
+    margin-bottom: 10px;
+    color: #1DB954;
+  }
+
+  #lyrics form {
+    margin-bottom: 10px;
+  }
+
+  #lyrics form div {
+    margin-bottom: 5px;
+  }
+
+  #lyrics form input[type="text"] {
+    width: 150px;
+    padding: 5px;
+  }
+
+  #lyrics form input[type="button"] {
+    background-color: #1DB954;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+  }
+
+  footer em {
+    color: #1DB954;
+  }
+
+  footer p {
+    margin-bottom: 5px;
+  }
+
+  .button1 {
+    background-image: url("facebook.png");
+    background-position: center;
+    display: inline-block;
+    background-size: contain;
+    border: none;
+    z-index: 10;
+    padding: 8px;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  .button2 {
+    background-image: url("twitter.png");
+    background-position: center;
+    display: inline-block;
+    background-size: contain;
+    border: none;
+    z-index: 10;
+    padding: 8px;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  .button3 {
+    background-image: url("ig.png");
+    background-position: center;
+    display: inline-block;
+    background-size: contain;
+    border: none;
+    z-index: 10;
+    padding: 8px;
+    text-align: center;
+    margin-top: 5px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  #main-container {
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  #contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  #preferiti_albums,
+  #preferiti_tracks,
+  #preferiti_artists {
+    width: calc(50% - 10px); /* Dividere gli elementi in due colonne */
+    background-color: #ffffff;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+
+  #preferiti_albums h1,
+  #preferiti_tracks h1,
+  #preferiti_artists h1 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  #preferiti_albums .here,
+  #preferiti_tracks .here,
+  #preferiti_artists .here {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #preferiti_albums .here > div,
+  #preferiti_tracks .here > div,
+  #preferiti_artists .here > div {
+    width: calc(50% - 5px); /* Dividere gli elementi figlio in due colonne */
+    margin-bottom: 5px;
+  }
+
+  #preferiti_albums .here img,
+  #preferiti_tracks .here img,
+  #preferiti_artists .here img {
+    width: 100%;
+    height: auto;
+  }
+
+  #preferiti_albums .here h3,
+  #preferiti_tracks .here h3,
+  #preferiti_artists .here h3 {
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: center;
+  }
+
+  #preferiti_albums .here .preferiti_,
+  #preferiti_tracks .here .preferiti_,
+  #preferiti_artists .here .preferiti_ {
+    width: 50%;
+    height: 50%;
+    height: auto;
+    display: block;
+    margin: 5px auto 0;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+  }
+
+  #menu-toggle {
+    display: block;
+    order: 1;
+    appearance: none;
+    background-image: url("./images/menu_icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin-right: 20px; /* Aggiungi una margine a destra per distanziare il bottone */
+    margin-bottom: 20px; /* Aggiungi una margine sotto per distanziare il bottone */
+  }
+
+ 
+  /* Nascondi i link del menu */
+  nav a {
+    display: none;
+  }
+
+  /* Mostra i link del menu quando il menu viene attivato */
+  #menu-toggle:checked ~ a {
+    display: block;
+  }
+}

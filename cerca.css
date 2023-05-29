@@ -1,0 +1,455 @@
+﻿/* Reset dei margini e del padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #f2f2f2;
+  min-height: 100vh; /* Imposta l'altezza minima del body come altezza dello schermo */
+  position: relative; /* Imposta il body come elemento di posizione relativa */
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+h4{
+  color:  #1DB954;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #00cc66;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  height: 30px;
+  margin-right: 20px;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+#search {
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+
+#search img {
+  height: 24px;
+  margin-right: 8px;
+}
+
+#search_bar {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 14px;
+  width: 100%;
+}
+
+#menu {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+#menu div {
+  background-color: #333;
+  width: 20px;
+  height: 2px;
+  margin-bottom: 4px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Profilo Utente */
+#profile_user {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  margin-bottom: 20px;
+}
+
+#profile_user img {
+  height: 50px;
+  margin-right: 20px;
+}
+
+#profile_user h1 {
+  font-size: 20px;
+}
+
+#profile_user p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Contenuto principale */
+#main-container {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+footer em {
+  color: #1DB954;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+.button1 {
+  background-image: url("facebook.png");
+  background-position: center;
+  display: inline-block;
+  background-size: cover;
+  border: none;
+  z-index: 10;
+  padding: 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.button2 {
+  background-image: url("twitter.png");
+  background-position: center;
+  display: inline-block;
+  background-size: cover;
+  border: none;
+  z-index: 10;
+  padding: 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.button3 {
+  background-image: url("ig.png");
+  background-position: center;
+  display: inline-block;
+  background-size: cover;
+  border: none;
+  z-index: 10;
+  padding: 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/*------------------------*/
+#container_album {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#container_album .here {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+#container_album img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#container_album h3 {
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+#container_album .Like {
+  width: 20%;
+  height: 25%;
+  height: auto;
+  display: block;
+  margin: 10px auto 0;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+#container_album .Like:hover {
+  opacity: 1;
+}
+
+#container_Tracks {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#container_Tracks .here {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+#container_Tracks img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#container_Tracks h3 {
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+#container_Tracks .Like {
+  width: 20%;
+  height: 25%;
+  height: auto;
+  display: block;
+  margin: 10px auto 0;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+#Container_Artists {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#Container_Artists .here {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+#Container_Artists img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#Container_Artists h3 {
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+#Container_Artists .Like {
+  width: 20%;
+  height: 25%;
+  height: auto;
+  display: block;
+  margin: 10px auto 0;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+#Container_Artists .Like:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  /* Header */
+  header {
+    padding: 10px;
+  }
+
+  #logo {
+    display:none;
+  }
+
+  nav a {
+    margin-right: 5px;
+  }
+
+  #search {
+    padding: 5px 10px;
+  }
+
+  #search img {
+    height: 16px;
+    margin-right: 4px;
+  }
+
+  #search_bar {
+    font-size: 12px;
+  }
+
+  /* Menu */
+  #menu {
+    padding: 5px;
+  }
+
+  #menu div {
+    width: 15px;
+    margin-bottom: 2px;
+  }
+
+  /* Titolo */
+  h1 {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  /* Profilo Utente */
+  #profile_user {
+    padding: 10px;
+  }
+
+  #profile_user img {
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  #profile_user h1 {
+    font-size: 16px;
+  }
+
+  #profile_user p {
+    font-size: 12px;
+  }
+
+  #main-container {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 5px;
+  }
+
+  footer p {
+    margin-bottom: 5px;
+  }
+
+  .button1 {
+    padding: 5px;
+    margin-top: 5px;
+  }
+
+  .button2 {
+    padding: 5px;
+    margin-top: 5px;
+  }
+
+  .button3 {
+    padding: 5px;
+    margin-top: 5px;
+  }
+
+  #container_album {
+    margin-top: 10px;
+  }
+
+  #container_album .here {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  #container_album img {
+    width: 150px;
+    height: 150px;
+  }
+
+  #container_album h3 {
+    font-size: 16px;
+  }
+
+  #container_album .Like {
+    margin: 5px auto 0;
+  }
+
+  #container_Tracks {
+    margin-top: 10px;
+  }
+
+  #container_Tracks .here {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  #container_Tracks img {
+    width: 150px;
+    height: 150px;
+  }
+
+  #container_Tracks h3 {
+    font-size: 16px;
+  }
+
+  #container_Tracks .Like {
+    margin: 5px auto 0;
+  }
+
+  #Container_Artists {
+    margin-top: 10px;
+  }
+
+  #Container_Artists .here {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  #Container_Artists img {
+    width: 150px;
+    height: 150px;
+  }
+
+  #Container_Artists h3 {
+    font-size: 16px;
+  }
+
+  #Container_Artists .Like {
+    margin: 5px auto 0;
+  }
+}

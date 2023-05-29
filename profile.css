@@ -1,0 +1,174 @@
+﻿/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #ffffff;
+}
+
+/* Header */
+header {
+  background-color: #1DB954;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo {
+  height: 100px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+nav #menu {
+  display: block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  order: 3;
+}
+
+nav #menu div {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  margin: 5px 0;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-icon {
+  display: none;
+}
+
+/* UserInfo */
+.userInfo {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin-right: 20px;
+  border: 3px solid #ffffff;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: black;
+}
+
+#Discovery {
+  margin-top: 40px;
+}
+
+#Discovery h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#Discovery div {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  grid-gap: 20px;
+}
+
+#Discovery iframe {
+  width: 100%;
+  height: 380px;
+  border: none;
+}
+
+
+.loading img {
+  width: 250px;
+  height: 250px;
+}
+
+
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+
+  #menu-icon {
+    display: block;
+  }
+
+
+  .avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  #menu-toggle {
+    display: block;
+    order: 1;
+    appearance: none;
+    background-image: url("./images/menu_icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+ 
+  /* Nascondi i link del menu */
+  nav a {
+    display: none;
+  }
+
+  /* Mostra i link del menu quando il menu viene attivato */
+  #menu-toggle:checked ~ a {
+    display: block;
+  }
+
+  #Discovery div {
+    display: block;
+  }
+
+  #Discovery iframe {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+  }
+}
+

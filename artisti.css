@@ -1,0 +1,261 @@
+﻿body {
+  margin: 0;
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+header {
+  height: 100px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1db954;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+nav a {
+  margin: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #1db954;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+nav img {
+  width: 120px;
+  height: 80px;
+}
+
+
+nav #menu div {
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  margin: 5px 0;
+}
+
+
+section {
+  margin: 100px;
+}
+
+section h1 {
+  color: #1db954;
+}
+
+section p {
+  text-align: left;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+footer em {
+  color: #1DB954;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+.button1 {
+  background-image: url("facebook.png");
+  background-position: center;
+  display: inline-block;
+  background-size: cover;
+  border: none;
+  z-index: 10;
+  padding: 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.button2 {
+  background-image: url("twitter.png");
+  background-position: center;
+  display: inline-block;
+  background-size: cover;
+  border: none;
+  z-index: 10;
+  padding: 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.button3 {
+  background-image: url("ig.png");
+  background-position: center;
+  display: inline-block;
+  background-size: cover;
+  border: none;
+  z-index: 10;
+  padding: 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#contents.hidden {
+  display: none;
+}
+
+#contents div {
+  width: 100%;
+}
+
+#artisti {
+  margin: 50px 0;
+  text-align: center;
+}
+
+#artisti h1 {
+  color: #1db954;
+}
+
+#artisti .here {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+#artisti .here div {
+  margin: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  width: calc(33.33% - 140px);
+  height: 400px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#artisti .here div img {
+  width: 200px;
+  height: 200px;
+}
+
+#artisti .here div h3 {
+  margin-top: 10px;
+  color: #1db954;
+}
+
+#artisti .here div p {
+  color: #1db954;
+}
+
+.hidden {
+  display: none;
+}
+
+#modal-view {
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.details {
+  font-size: 20px;
+}
+
+#modal-view.hidden {
+  display: none;
+}
+
+#modal-view div img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+#modal-view div h3 {
+  text-align: center;
+  color: #fff;
+}
+
+#modal-view div p {
+  text-align: justify;
+  line-height: 16px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+#modal-view div span:hover {
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 800px) {
+  main {
+    flex-direction: column;
+  }
+
+  section {
+    margin: 20px;
+  }
+
+  #artisti .here div {
+    margin: 10px;
+    width: 50%;
+    height: 50%;
+  }
+
+  footer {
+    height: 120px;
+  }
+
+  footer p {
+    font-size: 13px;
+  }
+
+  nav img {
+    display: NONE;
+  }
+
+  nav a {
+    margin: 4px;
+    color: #fff;
+    text-decoration: none;
+  }
+}

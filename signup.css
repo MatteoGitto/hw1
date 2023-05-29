@@ -1,0 +1,298 @@
+﻿body {
+  font-family: 'Special Elite', cursive;
+  background-color: #f5f5f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font: blod;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 8px;
+  padding: 40px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+form {
+  width: 100%;
+}
+
+.names {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.name,
+.cognome {
+  width: 100%;
+}
+
+.username, .email, .password, .confirm_password{
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.allow{
+  display: flex;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.allow input{
+  width: 20px;
+  height: 20px;
+}
+
+.allow label{
+  margin-top: 4px;
+  margin-left: 10px;
+}
+
+form img{
+  opacity: 0;
+  width: 10px;
+  margin-right: 10px;
+}
+
+form span {
+  opacity: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  transition: opacity 0.3s ease;
+}
+
+.close_error label {
+  color: #d01b2d;
+}
+
+.close_error span {
+  opacity: 1;
+  font-size: 14px;
+  color: #d01b2d;
+}
+
+.close_error img {
+  opacity: 1;
+}
+
+.close_error input, .close_error #upload {
+  border-color: #d01b2d;
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  border-color: #007bff;
+}
+
+.input-error {
+  border-color: #dc3545;
+}
+
+.error-message {
+  color: #dc3545;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.fileupload {
+  position: relative;
+  margin-top: 16px;
+}
+
+.fileupload label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.fileupload input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.fileupload #upload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.fileupload .error {
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.checkbox input {
+  margin-right: 8px;
+}
+
+.submit {
+  text-align: center;
+}
+
+.submit input {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit input:hover {
+  background-color: #0056b3;
+}
+
+.signup {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 24px;
+}
+
+.signup a {
+  color: #007bff;
+  font-weight: 600;
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.error img {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 12px;
+    overflow-x: hidden;
+  }
+
+  main {
+    width: 90%;
+    padding: 16px;
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .names {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cognome {
+    margin-top: 4px;
+  }
+
+  .username,
+  .email,
+  .password,
+  .confirm_password {
+    margin-bottom: 8px;
+  }
+
+  .allow label {
+    margin-top: 2px;
+  }
+
+  form img {
+    width: 10px;
+    margin-right: 6px;
+  }
+
+  .label {
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+
+  .input {
+    padding: 4px;
+  }
+
+  .fileupload label {
+    margin-bottom: 2px;
+  }
+
+  .fileupload #upload {
+    height: 24px;
+  }
+
+  .fileupload .error {
+    font-size: 10px;
+    margin-top: 2px;
+  }
+
+  .submit input {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  .signup {
+    font-size: 10px;
+    margin-top: 8px;
+  }
+}
+
+
